@@ -1,0 +1,3 @@
+-- Baza danych: `ksiegarnia` 
+-- Będzie ona przetwarzała indormacje o stanie ksiazek ,
+ pracownikach i klientach oraz ich formie płatności za ksiazke
