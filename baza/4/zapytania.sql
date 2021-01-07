@@ -25,6 +25,8 @@ SELECT * FROM ksiazki ORDER BY tytul ASC;
  SELECT klienci.imie, klienci.nazwisko, zamowienia.idzamowienia, zamowienia.status, zamowienia.data,
  ksiazki.tytul FROM klienci, zamowienia, ksiazki WHERE klienci.nazwisko="Rutkowski" AND 
  zamowienia.idksiazki=ksiazki.idksiazki AND klienci.idklienta=zamowienia.idklienta ORDER BY zamowienia.data DESC;
+ -- 11.Pokazuje zamówienia i rezultat pokazuje zamowienie z dokładnym opisem statusu oraz ksiazki.
+SELECT zamowienia.idzamowienia, ksiazki.tytul, ksiazki.imieautora, ksiazki.nazwiskoautora, zamowienia.data, zamowienia.status FROM zamowienia INNER JOIN ksiazki ON zamowienia.idksiazki = ksiazki.idksiazki;
  
  CREATE VIEW zapytanie1 AS SELECT * FROM ksiazki ORDER BY tytul ASC;
   CREATE VIEW zapytanie2 AS  SELECT * FROM ksiazki ORDER BY cena DESC LIMIT 1;
@@ -41,6 +43,7 @@ SELECT * FROM ksiazki ORDER BY tytul ASC;
           CREATE VIEW zapytanie10 AS SELECT klienci.imie, klienci.nazwisko, zamowienia.idzamowienia, zamowienia.status, zamowienia.data,
  ksiazki.tytul FROM klienci, zamowienia, ksiazki WHERE klienci.nazwisko="Rutkowski" AND 
  zamowienia.idksiazki=ksiazki.idksiazki AND klienci.idklienta=zamowienia.idklienta ORDER BY zamowienia.data DESC;
+ CREATE VIEW zapytanie1 AS SELECT zamowienia.idzamowienia, ksiazki.tytul, ksiazki.imieautora, ksiazki.nazwiskoautora, zamowienia.data, zamowienia.status FROM zamowienia INNER JOIN ksiazki ON zamowienia.idksiazki = ksiazki.idksiazki;
            
            
  
